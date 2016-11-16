@@ -7,12 +7,12 @@
 			<p class="word">
 				<span ng-repeat='x in word track by $index'>{{x}}</span>
 				<button ng-show='correct' ng-click='nextLevel()' type="button" class="btn btn-success bnt-lg glyphicon glyphicon-ok"></button>
-				<button ng-show='!correct' ng-click='clearField()' type="button" class="btn btn-danger bnt-lg glyphicon glyphicon-remove"></button>
+				<!--<button ng-show='!correct' ng-click='clearField()' type="button" class="btn btn-danger bnt-lg glyphicon glyphicon-remove"></button>-->
 			</p>
 			<p class="word word-user"><span ng-repeat='x in yourWord track by $index'><img src='img/letters/{{x}}.png' class="letter_img img-responsives"></span>
-			<!--<button ng-click='delete()' type="button" class="btn btn-danger glyphicon glyphicon-chevron-left"></button>--></p>
+			<button ng-show='yourWord' ng-click='delete()' type="button" class="btn btn-danger glyphicon glyphicon-chevron-left"></button></p>
 			<div class="letters">
-				<img class="img-responsive symbol col-xs-4 col-sm-3" ng-repeat='x in letters track by $index' ng-click='setItem(x);count = count + 1;countClick(x)' src='img/letters/{{x}}.png'>
+				<img class="img-responsive symbol col-xs-4 col-sm-3 col-md-2" ng-repeat='x in letters track by $index' ng-click='setItem(x);count = count + 1;countClick(x)' src='img/letters/{{x}}.png'>
 			</div>
 
 			<div class="btn-group btn-group-lg bnt-center">
