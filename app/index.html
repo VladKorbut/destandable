@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="destApp">
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script src='js/angular.js'></script>
+        <script src="js/angular-route.js"></script>
+        <script type="text/javascript">
+        	angular.module('destApp', [  ]);
+      	</script>
+        <script src="js/routing.js"></script>
+        <script src="js/ctrl/dest.js"></script>        
+        <script src="js/ctrl/alphabeth.js"></script>
+        <script type="text/javascript" src='js/ctrl/dest.js'></script>
+		<script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
+		<script type="text/javascript" src='js/bootstrap.js'></script>
+		
+		<base href="http://destanable.net23.net/">
+	</head>
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="/">Destandable</a>
+	    </div>
+	    <div class="nav navbar-nav navbar-right">
+	      <li><a href="/alphabeth">Помощь</a></li>
+	    </div>
+	  </div>
+	</nav>
+	<body class="container" ng-controller="destCtrl">
+		<div ng-view></div>
+	</body>
+</html>

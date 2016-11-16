@@ -1,0 +1,21 @@
+<div ng-init='count'>
+	<h1>
+		<button ng-show="!downHide" ng-click='levelDown()' type="button" class="btn btn-default glyphicon glyphicon-arrow-left"></button>
+			Уровень {{globalLevel+1}}
+		<button ng-show="!upHide" ng-click='levelUp()' type="button" class="btn btn-default glyphicon glyphicon-arrow-right"></button>
+	</h1>
+			<p class="word">
+				<span ng-repeat='x in word track by $index'>{{x}}</span>
+				<button ng-show='correct' ng-click='nextLevel()' type="button" class="btn btn-success bnt-lg glyphicon glyphicon-ok"></button>
+				<button ng-show='!correct' ng-click='clearField()' type="button" class="btn btn-danger bnt-lg glyphicon glyphicon-remove"></button>
+			</p>
+			<p class="word word-user"><span ng-repeat='x in yourWord track by $index'><img src='img/letters/{{x}}.gif' class="letter_img img-responsives"></span>
+			<!--<button ng-click='delete()' type="button" class="btn btn-danger glyphicon glyphicon-chevron-left"></button>--></p>
+			<div class="letters">
+				<img class="img-responsive symbol col-xs-4 col-sm-3" ng-repeat='x in letters track by $index' ng-click='setItem(x);count = count + 1;countClick(x)' src='img/letters/{{x}}.gif'>
+			</div>
+
+			<div class="btn-group btn-group-lg bnt-center">
+			  
+			</div>
+</div>
