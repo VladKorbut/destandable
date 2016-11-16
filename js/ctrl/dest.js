@@ -18,6 +18,7 @@ destApp.controller('destCtrl', function($scope, $http, $rootScope) {
             alert(x);
         }
         $scope.count;
+        $scope.correct = "";
         $scope.countClick = function(letter){
             if($scope.count<$scope.word.length)
             $scope.count=$scope.count+1;
