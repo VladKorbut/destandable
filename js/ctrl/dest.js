@@ -67,7 +67,7 @@ destApp.controller('destCtrl', function($scope, $http, $rootScope) {
             }
         }
         $rootScope.levelUp = function(){
-            if($rootScope.globalLevel>=0){
+            if($rootScope.globalLevel<4){
                 $scope.downHide=0;
                 $rootScope.globalLevel +=1;
                 $rootScope.level = 0;
