@@ -7,8 +7,7 @@ destApp.controller('destCtrl', function($scope, $http, $rootScope) {
         $scope.word=$scope.words[$rootScope.level];
         $scope.letters=data[$rootScope.globalLevel].letters;
         $scope.word = $scope.word.split('');
-        yourWord = "";
-        $scope.yourWord = yourWord.split('');
+        $scope.yourWord = "";
         $scope.count=0;
         $scope.letters = $scope.letters.split('');
         $scope.setItem=function(x){
@@ -53,7 +52,6 @@ destApp.controller('destCtrl', function($scope, $http, $rootScope) {
             }   
 
         }
-
         $scope.delete = function(){
             if($scope.correct != 1){
                 $scope.yourWord = $scope.yourWord.substring(0,$scope.yourWord.length-1);
@@ -67,8 +65,10 @@ destApp.controller('destCtrl', function($scope, $http, $rootScope) {
                 $scope.correct="";
             }
         }
+        console.log($scope.yourWord);
         $rootScope.levelUp = function(){
-            if($rootScope.globalLevel<4){
+        console.log($scope.yourWord);
+            if($rootScope.globalLevel<3){
                 $scope.downHide=0;
                 $rootScope.globalLevel +=1;
                 $rootScope.level = 0;
@@ -76,8 +76,8 @@ destApp.controller('destCtrl', function($scope, $http, $rootScope) {
                 $scope.word=$scope.words[$rootScope.level];
                 $scope.letters=data[$rootScope.globalLevel].letters;
                 $scope.word = $scope.word.split('');
-                yourWord = "";
-                $scope.yourWord = yourWord.split('');
+                $scope.yourWord = "";
+                $scope.yourWord = $scope.yourWord.split('');
             }else
                   $scope.upHide=1;
         }
@@ -92,8 +92,8 @@ destApp.controller('destCtrl', function($scope, $http, $rootScope) {
                 $scope.word=$scope.words[$rootScope.level];
                 $scope.letters=data[$rootScope.globalLevel].letters;
                 $scope.word = $scope.word.split('');
-                yourWord = "";
-                $scope.yourWord = yourWord.split('');
+                $scope.yourWord = "";
+                $scope.yourWord = $scope.yourWord.split('');
                 $scope.correct="";
             }else
                 $scope.downHide=1;
