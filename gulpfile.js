@@ -1,10 +1,11 @@
-var gulp = require('gulp'),
-    $ = require('gulp-load-plugins')();
-
-gulp.task('server', ['watch'], function() {
-  $.connect.server({
-    root: '', 
-    port: 8000, 
-    livereload: true 
-  })
+var gulp = require('gulp');
+var webserver = require('gulp-webserver');
+ 
+gulp.task('webserver', function() {
+  gulp.src('')
+    .pipe(webserver({
+      livereload: true,
+      directoryListing: true,
+      open: 'http://localhost:8000/index.html'
+    }));
 });
