@@ -21,6 +21,10 @@ var destApp = angular.module('destApp', ["ngRoute"])
                 templateUrl:'levels.html',
                 controller: 'alphabethCtrl'
             })
+            .when('/level_prev',{
+                templateUrl:'level_preview.html',
+                controller: 'levelPrev'
+            })
             .otherwise({
             redirectTo: '/'
         });
