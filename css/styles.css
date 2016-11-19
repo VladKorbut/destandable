@@ -18,6 +18,10 @@
 	font-size:36pt;
 	text-align: center;
 }
+.letter_img{
+	border: 2px solid;
+	color : white;
+}
 .correct{
 	height:50px;
 	text-align:center;
