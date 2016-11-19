@@ -12,26 +12,28 @@ destApp.controller('destCtrl', function($scope, $http, $rootScope) {
         $scope.letterCount=0;
         $scope.letters = $scope.letters.split('');
         $scope.setItem=function(x){
-            function setColor(){
-                img[i].style.color = '#fff';
-            }
+            if($scope.correct!=1){
+                function setColor(){
+                    img[i].style.color = '#fff';
+                }
 
-            var img = document.getElementsByClassName('letter_img');
-            var obj=document.getElementsByClassName('letter');
-            var i = $scope.letters.indexOf(x);
+                var img = document.getElementsByClassName('letter_img');
+                var obj=document.getElementsByClassName('letter');
+                var i = $scope.letters.indexOf(x);
 
-            if(x == $scope.word[$scope.letterCount] && $scope.count == $scope.letterCount){
-                img[i].style.color = 'green';
-                obj[$scope.letterCount].style.color='green';
-                $scope.letterCount += 1;
-                setTimeout(setColor,300);
+                if(x == $scope.word[$scope.letterCount] && $scope.count == $scope.letterCount){
+                    img[i].style.color = 'green';
+                    obj[$scope.letterCount].style.color='green';
+                    $scope.letterCount += 1;
+                    setTimeout(setColor,300);
 
+                }
+                else if(x != $scope.word[$scope.letterCount] && $scope.count == $scope.letterCount){
+                    img[i].style.color = 'red';
+                    setTimeout(setColor,300);
+                }
+                $scope.item = x;
             }
-            else if(x != $scope.word[$scope.letterCount] && $scope.count == $scope.letterCount){
-                img[i].style.color = 'red';
-                setTimeout(setColor,300);
-            }
-            $scope.item = x;
         };
         $scope.selectLet=function(){
             alert(x);
@@ -39,19 +41,23 @@ destApp.controller('destCtrl', function($scope, $http, $rootScope) {
         $scope.count;
         $scope.correct = "";
         $scope.countClick = function(letter){
-            $scope.correct = "";
+            if($scope.correct!=1){
+                $scope.correct = "";
 
-            if(letter == $scope.word[$scope.yourWord.length]){
-                $scope.count = $scope.count+1;
-                $scope.yourWord = $scope.yourWord + letter;
-            }
-            if($scope.count == $scope.word.length){
-                if($scope.word.join('') == $scope.yourWord){
-                    $scope.correct = 1;
-                    $scope.yourWord = "";
+                if(letter == $scope.word[$scope.yourWord.length]){
+                    $scope.count = $scope.count+1;
+                    $scope.yourWord = $scope.yourWord + letter;
                 }
-                else
-                    $scope.correct = 0;
+
+                if($scope.count == $scope.word.length){
+                    if($scope.word.join('') == $scope.yourWord){
+                        $scope.correct = 1;
+                        $scope.yourWord = "";
+                    }
+                    else{
+                        $scope.correct = 0;
+                    }
+                }
             }
         }
 
