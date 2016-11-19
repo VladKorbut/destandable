@@ -37,7 +37,7 @@ destApp.controller('destCtrl', function($scope, $http, $rootScope) {
             if($scope.count==$scope.word.length){
                 if($scope.word.join('')==$scope.yourWord){
                     $scope.correct = 1;
-                    
+                    $scope.yourWord = "";
                 }
                 else
                     $scope.correct = 0;
