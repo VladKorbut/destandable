@@ -1,24 +1,27 @@
-<div ng-init='count'>
-	<h1>
-		<!--<button ng-show="!downHide" ng-click='levelDown()' type="button" class="btn btn-default glyphicon glyphicon-arrow-left"></button>-->
+<div class="wrapper" ng-init='count'>
+	<div class="fixed-top">
+		<h1>
+			<!--<button ng-show="!downHide" ng-click='levelDown()' type="button" class="btn btn-default glyphicon glyphicon-arrow-left"></button>-->
 			Уровень {{globalLevel+1}}
-		<!--<button ng-show="!upHide" ng-click='levelUp()' type="button" class="btn btn-default glyphicon glyphicon-arrow-right"></button>-->
-	</h1>
-			<p class="word">
-				<span class="letter" ng-repeat='x in word track by $index'>{{x}}</span>
-				<button ng-show='correct' ng-click='nextLevel()' type="button" class="btn btn-success bnt-lg glyphicon glyphicon-ok"></button>
-				<!--<button ng-show='!correct' ng-click='clearField()' type="button" class="btn btn-danger bnt-lg glyphicon glyphicon-remove"></button>-->
-			</p>
-			<p id='menu' class="default">
-				<span ng-repeat='x in yourWord track by $index'>
-					<img src='img/letters/{{x}}.png' class="letter_img img-responsives">
-				</span>
-				<!--<button ng-show='yourWord' ng-click='delete()' type="button" class="btn btn-danger glyphicon glyphicon-chevron-left"></button> -->
-			</p>
-			<div class="letters">
-				<img class="letter_img" class="img-responsive symbol col-xs-4 col-sm-3 col-md-2" ng-repeat='x in letters track by $index' ng-click='setItem(x); count = count + 1; countClick(x)' src='img/letters/{{x}}.png'>
-			</div>
-			<div class="btn-group btn-group-lg bnt-center">
-			  
-			</div>
+
+			<!--<button ng-show="!upHide" ng-click='levelUp()' type="button" class="btn btn-default glyphicon glyphicon-arrow-right"></button>-->
+		</h1>
+		<p class="word">
+			<span class="letter" ng-repeat='x in word track by $index'>{{x}}</span>
+			<!--<button ng-show='yourWord' ng-click='delete()' type="button" class="btn btn-danger glyphicon glyphicon-chevron-left"></button>-->
+			<button ng-show='correct' ng-click='nextLevel()' type="button" class="btn btn-success bnt-lg glyphicon glyphicon-ok"></button>
+			<!--<button ng-show='!correct' ng-click='clearField()' type="button" class="btn btn-danger bnt-lg glyphicon glyphicon-remove"></button>-->
+		</p>
+		<!--<p id='menu' class="default">
+			<span ng-repeat='x in yourWord track by $index'>
+				<img src='img/letters/{{x}}.png' class="letter_img img-responsives">
+			</span>
+			
+			</p>-->
+	</div>
+	<div class="letters">
+		<img class="letter_img" class="img-responsive symbol col-xs-4 col-sm-3 col-md-2" ng-repeat='x in letters track by $index' ng-click='setItem(x);count = count + 1;countClick(x)' src='img/letters/{{x}}.png'>
+	</div>
+	<div class="btn-group btn-group-lg bnt-center">
+	</div>
 </div>

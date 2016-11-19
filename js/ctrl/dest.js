@@ -13,20 +13,22 @@ destApp.controller('destCtrl', function($scope, $http, $rootScope) {
         $scope.letters = $scope.letters.split('');
         $scope.setItem=function(x){
             function setColor(){
-                obj[ i+$scope.letterCount ].style.color = '#fff';
+                img[i].style.color = '#fff';
             }
 
-            var obj = document.getElementsByClassName('letter_img');
+            var img = document.getElementsByClassName('letter_img');
+            var obj=document.getElementsByClassName('letter');
             var i = $scope.letters.indexOf(x);
 
             if(x == $scope.word[$scope.letterCount] && $scope.count == $scope.letterCount){
-                obj[ i + $scope.letterCount ].style.color = 'green';
+                img[i].style.color = 'green';
+                obj[$scope.letterCount].style.color='green';
                 $scope.letterCount += 1;
                 setTimeout(setColor,300);
 
             }
             else if(x != $scope.word[$scope.letterCount] && $scope.count == $scope.letterCount){
-                obj[ i + $scope.letterCount ].style.color = 'red';
+                img[i].style.color = 'red';
                 setTimeout(setColor,300);
             }
             $scope.item = x;
@@ -46,7 +48,7 @@ destApp.controller('destCtrl', function($scope, $http, $rootScope) {
             if($scope.count == $scope.word.length){
                 if($scope.word.join('') == $scope.yourWord){
                     $scope.correct = 1;
-                    
+                    $scope.yourWord = "";
                 }
                 else
                     $scope.correct = 0;
