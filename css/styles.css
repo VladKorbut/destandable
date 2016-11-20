@@ -1,11 +1,11 @@
 body{
-	padding-top: 55px;
+	padding-top: 64px;
 }
 .wrapper{
-	padding-top: 150px;
+	padding-top: 190px;
 }
 .symbol{
-	transition: 0.1s ease-in;
+	transition: 0.2s ease-in-out;
 	font-size: 56pt;
 	cursor: pointer;
 	text-align: center;

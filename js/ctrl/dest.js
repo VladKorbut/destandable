@@ -22,14 +22,14 @@ destApp.controller('destCtrl', function($scope, $http, $rootScope) {
                 var i = $scope.letters.indexOf(x);
 
                 if(x == $scope.word[$scope.letterCount] && $scope.count == $scope.letterCount){
-                    img[i].style.backgroundColor = 'green';
-                    obj[$scope.letterCount].style.color='green';
+                    img[i].style.backgroundColor = '#439a46';
+                    obj[$scope.letterCount].style.color='#439a46';
                     $scope.letterCount += 1;
                     setTimeout(setColor,300);
 
                 }
                 else if(x != $scope.word[$scope.letterCount] && $scope.count == $scope.letterCount){
-                    img[i].style.backgroundColor = 'red';
+                    img[i].style.backgroundColor = '#e51c23';
                     setTimeout(setColor,300);
                 }
                 $scope.item = x;
