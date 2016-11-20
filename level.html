@@ -1,11 +1,10 @@
 <div class="wrapper" ng-init='count'>
 	<div class="fixed-top">
-		<h1>
+		<h4 class="text-center">
 			<!--<button ng-show="!downHide" ng-click='levelDown()' type="button" class="btn btn-default glyphicon glyphicon-arrow-left"></button>-->
 			Уровень {{globalLevel+1}}
-
 			<!--<button ng-show="!upHide" ng-click='levelUp()' type="button" class="btn btn-default glyphicon glyphicon-arrow-right"></button>-->
-		</h1>
+		</h4 class="text-center">
 		<p class="word">
 			<span class="letter" ng-repeat='x in word track by $index'>{{x}}</span>
 			<!--<button ng-show='yourWord' ng-click='delete()' type="button" class="btn btn-danger glyphicon glyphicon-chevron-left"></button>-->

@@ -1,8 +1,8 @@
 body{
-	padding-top: 64px;
+	padding-top: 70px;
 }
 .wrapper{
-	padding-top: 190px;
+	padding-top: 130px;
 }
 .symbol{
 	transition: 0.2s ease-in-out;
@@ -20,7 +20,8 @@ body{
 	z-index: 101;
 	position: fixed;
 	width: 100%;
-	top:50px;
+	top:64px;
+	padding-top: 5px;
 	left: 0;
 	background: rgba(255,255,255,0.95);
 	box-shadow: 0 0 3px 3px #888;
