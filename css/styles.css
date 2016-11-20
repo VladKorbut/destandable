@@ -1,11 +1,16 @@
 body{
 	padding-top: 70px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	
 }
 .wrapper{
 	padding-top: 130px;
 }
 .symbol{
-	transition: 0.2s ease-in-out;
+	transition: 0.1s ease-in-out;
 	font-size: 56pt;
 	cursor: pointer;
 	text-align: center;
@@ -90,3 +95,56 @@ h1{
 .btn{
 	margin: 5px;
 }
+
+
+
+
+.navLinks {
+	margin: 3px auto;
+}
+
+
+.navLinks:hover {
+	margin: 2px -1px;
+	border: 1px solid black;
+	/*background-color: #ffa;*/
+}
+
+
+
+.descrDiv {
+	margin: 30px 0;
+	cursor: default;
+}
+
+.manualBoxes:hover {
+	cursor: pointer;
+	background-color: #ffa;
+}
+
+
+em {
+	text-decoration: none;
+	font-style: normal;
+	
+}
+
+.addedLetters {
+	letter-spacing: 5px;
+	font-weight: bold;
+}
+
+
+.levelLabels {
+	font-size: 2.5em;
+}
+
+
+
+
+
+
+
+
+
+
