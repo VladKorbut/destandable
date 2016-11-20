@@ -35,15 +35,11 @@ destApp.controller('destCtrl', function($scope, $http, $rootScope) {
                 $scope.item = x;
             }
         };
-        $scope.selectLet=function(){
-            alert(x);
-        }
         $scope.count;
         $scope.correct = "";
         $scope.countClick = function(letter){
             if($scope.correct!=1){
                 $scope.correct = "";
-
                 if(letter == $scope.word[$scope.yourWord.length]){
                     $scope.count = $scope.count+1;
                     $scope.yourWord = $scope.yourWord + letter;
