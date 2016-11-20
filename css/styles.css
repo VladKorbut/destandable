@@ -119,7 +119,7 @@ h1{
 
 .manualBoxes:hover {
 	cursor: pointer;
-	background-color: #ffa;
+	/*background-color: #ffa;*/
 }
 
 
@@ -136,7 +136,7 @@ em {
 
 
 .levelLabels {
-	font-size: 2.5em;
+	font-size: 1.7em;
 }
 
 
