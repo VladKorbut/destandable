@@ -26,7 +26,7 @@ body{
 	position: fixed;
 	width: 100%;
 	top:64px;
-	padding-top: 5px;
+	padding-top: 10px;
 	left: 0;
 	background: rgba(255,255,255,0.95);
 	box-shadow: 0 0 3px 3px #888;
@@ -75,8 +75,7 @@ h1{
 	text-align: center;
 }
 .thumbnail{
-	font-size: 1.5em;
-	padding:50px 0;
+	padding:25px 0;
 }
 .symbol:active{
 	opacity: 0.5;
@@ -95,23 +94,6 @@ h1{
 .btn{
 	margin: 5px;
 }
-
-
-
-
-.navLinks {
-	margin: 3px auto;
-}
-
-
-.navLinks:hover {
-	margin: 2px -1px;
-	border: 1px solid black;
-	/*background-color: #ffa;*/
-}
-
-
-
 .descrDiv {
 	margin: 30px 0;
 	cursor: default;
@@ -139,13 +121,3 @@ em {
 .levelLabels {
 	font-size: 1.7em;
 }
-
-
-
-
-
-
-
-
-
-
