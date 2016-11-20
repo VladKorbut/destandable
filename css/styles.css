@@ -130,7 +130,8 @@ em {
 }
 
 .addedLetters {
-	letter-spacing: 5px;
+	/*letter-spacing: 5px;*/
+	letter-spacing: 2px;
 	font-weight: bold;
 }
 
