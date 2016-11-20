@@ -14,7 +14,7 @@ destApp.controller('destCtrl', function($scope, $http, $rootScope) {
         $scope.setItem=function(x){
             if($scope.correct!=1){
                 function setColor(){
-                    img[i].style.color = '#fff';
+                    img[i].style.backgroundColor = '#fff';
                 }
 
                 var img = document.getElementsByClassName('letter_img');
@@ -22,14 +22,14 @@ destApp.controller('destCtrl', function($scope, $http, $rootScope) {
                 var i = $scope.letters.indexOf(x);
 
                 if(x == $scope.word[$scope.letterCount] && $scope.count == $scope.letterCount){
-                    img[i].style.color = 'green';
+                    img[i].style.backgroundColor = 'green';
                     obj[$scope.letterCount].style.color='green';
                     $scope.letterCount += 1;
                     setTimeout(setColor,300);
 
                 }
                 else if(x != $scope.word[$scope.letterCount] && $scope.count == $scope.letterCount){
-                    img[i].style.color = 'red';
+                    img[i].style.backgroundColor = 'red';
                     setTimeout(setColor,300);
                 }
                 $scope.item = x;
