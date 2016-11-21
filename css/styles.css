@@ -1,3 +1,7 @@
+@font-face {
+    font-family: dacht; 
+    src: url("/fonts/dacth.ttf");
+}
 body{
 	padding-top: 70px;
 	-webkit-user-select: none;
@@ -32,6 +36,7 @@ body{
 	box-shadow: 0 0 3px 3px #888;
 }
 .word{
+	text-transform: uppercase;
 	font-size:36pt;
 	text-align: center;
 }
@@ -70,9 +75,6 @@ body{
 .text-center{
 	text-align: center;
 	margin: auto;
-}
-h1{
-	text-align: center;
 }
 .thumbnail{
 	padding:25px 0;
